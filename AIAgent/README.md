@@ -19,3 +19,8 @@ Finally, run `flask --app app.py run` from the project's directory
 
 ## Technologies
 Flask, OpenAI, pydantic
+
+## TODO
+- Work on better UI for program and prompt
+- Do Calendar integration
+- Add a framework ?Add

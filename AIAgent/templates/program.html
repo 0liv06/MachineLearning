@@ -1,0 +1,18 @@
+<!doctype html>
+<title>Your program {{ program.participants }}</title>
+<section>
+    <h1>Program</h1>
+    <div id="participants"><b>Participants:</b> {{ program.participants }}</div>
+    <div id="details"><b>Details:</b></div>
+    {% for prog in program.program %}
+        <div class="day"><b>Day:</b> {{ prog.day }}</div>
+        {% for exercise in prog.exercises %}
+            <div class="exercise">
+                <div class="exercise-element"><b>Name:</b> {{ exercise.name }}</div>
+                <div class="exercise-element"><b>Sets:</b> {{ exercise.sets }}</div>
+                <div class="exercise-element"><b>Reps:</b> {{ exercise.reps }}</div>
+                <div class="exercise-element"><b>Weight:</b> {{ exercise.weight }} {{ exercise.weight_unit }}</div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</section>
