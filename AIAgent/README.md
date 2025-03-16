@@ -29,6 +29,7 @@ Finally, run `flask --app app.py run` from the project's directory
     F --> G[Out]
     C --> F[Fail]
     D --> |Out|
+    
  ```
 
 ## Technologies
