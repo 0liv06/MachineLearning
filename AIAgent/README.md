@@ -31,6 +31,14 @@ Finally, run `flask --app app.py run` from the project's directory
     F --> G{Out}
     
  ```
+### Get Program
+Step that generates a workout program from user input, keeping track of the user objective.
+
+### Get Diet
+If successfully generated, the objective from `Get Program` is reused to generate a food diet program to pair up with the workout.
+
+## Generate Calendar Invite
+Generates a calendar invite using the days the user specified.
 
 ## Technologies
 Flask, OpenAI, pydantic
