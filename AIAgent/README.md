@@ -17,6 +17,20 @@ Then, install Flask https://flask.palletsprojects.com/en/stable/installation/
 
 Finally, run `flask --app app.py run` from the project's directory
 
+## Workflow
+```mermaid
+ flowchart LR
+    A[In] --> B[Get Program]
+    B --> C{Gate}
+    C --> |Pass| D[Generate Calendar Invite]
+    C --> |Pass| E[Get Diet]
+    E --> F[Aggregator]
+    D --> F[Aggregator]
+    F --> G[Out]
+    C --> F[Fail]
+    D --> |Out|
+ ```
+
 ## Technologies
 Flask, OpenAI, pydantic
 
