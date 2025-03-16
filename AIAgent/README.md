@@ -28,7 +28,7 @@ Finally, run `flask --app app.py run` from the project's directory
     D --> F[Aggregator]
     F --> G[Out]
     C --> F[Fail]
-    D --> |Out|
+    D --> G{Out}
     
  ```
 
