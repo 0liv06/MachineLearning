@@ -2,7 +2,8 @@ import os
 import logging
 
 from openai import OpenAI
-from model import WorkoutProgram, workout_program_to_json
+from model import WorkoutProgram
+from converter import workout_program_to_json
 
 openapi_key = ''
 with open(os.path.expanduser('~') + '/.openai/api.key') as f:
@@ -32,5 +33,5 @@ def get_program(prompt: str):
     )
     return workout_program_to_json(completion.choices[0].message.parsed)
 
-def process_program_request(user_input: str):
+def extract_program_info(user_input: str) -> WorkoutProgram:
     pass
