@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Field
-from converter import workout_program_to_json
 
 # Workout model
 class Weight(BaseModel):
@@ -20,8 +19,6 @@ class WorkoutProgram(BaseModel):
     participants: list[str] = Field(description='The workout participants')
     program: list[Program] = Field(description='The program to be executed by the participants')
     objective: str = Field(description='The objective of the participants')
-    def __str__(self):
-        return workout_program_to_json(self)
 
 # Diet model
 class Recipe(BaseModel):
@@ -50,3 +47,4 @@ class WorkoutProgramExtraction(BaseModel):
     description: str = Field(description='Raw description of the workout program with the participants objective')
     is_workout_program: bool = Field(description='Whether description describes a workout program with an objective')
     confidence_score: float = Field(description='Confidence score between 1 and 0')
+

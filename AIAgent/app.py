@@ -5,7 +5,7 @@ from flask import request
 from flask import render_template
 
 sys.path.append(os.getcwd())
-from agent import get_program
+from agent import generate_program
 
 app = Flask(__name__)
 
@@ -16,4 +16,4 @@ def prompt():
 @app.route("/do_request", methods = ['POST'])
 def do_request():
     prompt =  request.form.get('prompt')
-    return render_template('program.html', program=get_program(prompt))
+    return render_template('program.html', program=generate_program(prompt))
